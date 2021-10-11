@@ -39,13 +39,12 @@ for (let i = 0; i < linkMenu.length; i++) {
 }
 
 const swiper = new Swiper('.swiper', {
-	pagination: {
-		el: ".swiper-pagination",
-		dynamicBullets: true,
-	},
 	navigation: {
 		nextEl: ".slider-button__right",
 		prevEl: ".slider-button__left",
+	},
+	pagination: {
+		el: ".swiper-pagination",
 	},
 });
 
@@ -53,16 +52,40 @@ const swiper = new Swiper('.swiper', {
 const catalogSlider = document.querySelectorAll('.catalog-slider');
 const catalogList = document.querySelectorAll('.catalog__menu-list');
 
-
 for (let i = 0; i < catalogList.length; i++) {
+
+	catalogList[i].addEventListener('click', function () {
+
+		for (let i = 0; i < catalogSlider.length; i++) {
+			catalogSlider[i].classList.remove('active')
+			catalogList[i].classList.remove('background')
+		}
+
+		catalogSlider[i].classList.add('active')
+		catalogList[i].classList.add('background')
+	});
+
+}
+
+const textButton = document.querySelectorAll('.question__info');
+const textOpen = document.querySelectorAll('.question__text-lock');
+const angleDown = document.querySelectorAll('.fa-angle-down');
+const angleUp = document.querySelectorAll('.fa-angle-up')
+
+for (let i = 0; i < textButton.length; i++) {
 	let index = i;
 
-catalogList[index].addEventListener('click', function () {
-
-	if (catalogSlider[index].classList.contains('active')) {
-		catalogSlider[index].classList.remove('active')
-	} else {
-		catalogSlider[index].classList.add('active')
-	}
-});
+	textButton[index].addEventListener('click', function () {
+		textOpen[index].classList.toggle('text__open');
+		angleDown[index].classList.toggle('angle__clous');
+		angleUp[index].classList.toggle('angle__up');
+	});
+	
 }
+
+const infoButton = document.querySelector('.info__open-button');
+const infoText = document.querySelector('.info__clouse-text');
+
+infoButton.addEventListener('click', function () {
+	infoText.classList.toggle('info__open-text');
+});
