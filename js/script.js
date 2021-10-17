@@ -1,3 +1,5 @@
+"use strict"
+
 function testWebP(callback) {
 	var webP = new Image();
 	webP.onload = webP.onerror = function () {
@@ -46,7 +48,33 @@ const swiper = new Swiper('.swiper', {
 	pagination: {
 		el: ".swiper-pagination",
 	},
+	spaceBetween: 30,
 });
+
+const reviews = new Swiper('.slider', {
+	navigation: {
+		nextEl: ".neopren-button__right",
+		prevEl: ".neopren-button__left",
+	},
+	spaceBetween: 20,
+	slidesPerView: 4,
+	effect: "slide",
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		480: {
+			slidesPerView: 2,
+		},
+		991: {
+			slidesPerView: 3,
+		},
+		1199: {
+			slidesPerView: 4,
+		},
+
+	}
+})
 
 
 const catalogSlider = document.querySelectorAll('.catalog-slider');
@@ -80,7 +108,7 @@ for (let i = 0; i < textButton.length; i++) {
 		angleDown[index].classList.toggle('angle__clous');
 		angleUp[index].classList.toggle('angle__up');
 	});
-	
+
 }
 
 const infoButton = document.querySelector('.info__open-button');
@@ -89,3 +117,5 @@ const infoText = document.querySelector('.info__clouse-text');
 infoButton.addEventListener('click', function () {
 	infoText.classList.toggle('info__open-text');
 });
+
+
