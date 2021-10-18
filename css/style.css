@@ -1546,7 +1546,6 @@ a:hover {
 
 .fa-angle-down {
   margin-left: 10px;
-  font-size: 15px;
 }
 
 .reviews__block {
@@ -1738,6 +1737,10 @@ a:hover {
 
 .print__button {
   margin-top: 55px;
+}
+
+.fa-style {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1399px) {

@@ -114,8 +114,10 @@ for (let i = 0; i < textButton.length; i++) {
 const infoButton = document.querySelector('.info__open-button');
 const infoText = document.querySelector('.info__clouse-text');
 
-infoButton.addEventListener('click', function () {
-	infoText.classList.toggle('info__open-text');
-});
+if (infoButton) {
+	infoButton.addEventListener('click', function () {
+		infoText.classList.toggle('info__open-text');
+	});
+}
 
 
