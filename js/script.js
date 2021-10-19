@@ -121,3 +121,41 @@ if (infoButton) {
 }
 
 
+
+window.addEventListener("DOMContentLoaded", handleWindowLoad);
+
+function handleWindowLoad() {
+
+	const video = document.querySelector('.production__video-content');
+	const playButton = document.querySelector('.production__play');
+	const videoInfo = document.querySelector('.info__video-content');
+	const infoPlay = document.querySelector('.info-button__play');
+
+	playButton.addEventListener('click', Play_Pause_Video);
+
+	function Play_Pause_Video() {
+		if (video.paused === true) {
+			video.play();
+			playButton.classList.add('clouse')
+		}
+		video.addEventListener('click', function () {
+			video.pause();
+			playButton.classList.remove('clouse')
+		});
+	}
+
+	infoPlay.addEventListener('click', Play_Video_Info);
+	
+	function Play_Video_Info() {
+		if (videoInfo.paused === true) {
+			videoInfo.play();
+			infoPlay.classList.add('clouse')
+		}
+		videoInfo.addEventListener('click', function () {
+			videoInfo.pause();
+			infoPlay.classList.remove('clouse')
+		});
+	}
+
+}
+

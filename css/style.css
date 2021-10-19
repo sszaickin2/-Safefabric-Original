@@ -1031,10 +1031,16 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .info__video-content {
   width: 100%;
+}
+
+.info__play {
+  position: absolute;
+  cursor: pointer;
 }
 
 .info__open-button {
@@ -1048,17 +1054,22 @@ a:hover {
 .production__video {
   margin-top: 55px;
   width: 100%;
-  height: 50vh;
-  background: #C4C4C4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+}
+
+.production__video-content {
+  width: 100%;
+}
+
+.production__play {
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  left: 48%;
+}
+
+.clouse {
+  display: none;
 }
 
 .production__heading-min {
@@ -1758,6 +1769,10 @@ a:hover {
 }
 
 @media screen and (max-width: 1199px) {
+  .production__play {
+    left: 47%;
+  }
+
   .image__width {
     min-width: 320px;
   }
@@ -1836,6 +1851,11 @@ a:hover {
     margin-top: 30px;
     width: 100%;
     height: 400px;
+  }
+
+  .production__play {
+    left: 45%;
+    top: 35%;
   }
 
   .order__item {
@@ -2153,6 +2173,11 @@ a:hover {
     margin-top: 30px;
   }
 
+  .production__play {
+    top: 33%;
+    left: 43%;
+  }
+
   .order-block {
     padding-top: 100px;
   }
@@ -2321,8 +2346,27 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .production__play {
+    top: 30%;
+    left: 40%;
+  }
+
+  .production__play {
+    top: 23%;
+    left: 39%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .price__content {
     padding: 50px 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .production__play {
+    top: 22%;
+    left: 37%;
   }
 }
