@@ -596,10 +596,6 @@ a:hover {
   background-color: rgba(36, 46, 81, 0.2);
 }
 
-.header__mobile-clouse {
-  display: none;
-}
-
 .visuallyHidden {
   position: absolute;
   overflow: hidden;
@@ -849,7 +845,7 @@ a:hover {
 }
 
 .catalog__menu-list {
-  width: 190px;
+  width: 200px;
 }
 
 .catalog__menu-list:not(:last-child) {
@@ -1883,6 +1879,10 @@ a:hover {
 
   .catalog-slider__right {
     width: 60%;
+  }
+
+  .catalog__menu-list {
+    width: 220px;
   }
 
   .form__push {
