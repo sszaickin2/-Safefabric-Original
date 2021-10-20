@@ -16,19 +16,20 @@ testWebP(function (support) {
 });
 
 const color = document.querySelector('body')
-const button = document.querySelector('.header__mobile-menu');
-const buttonClouse = document.querySelector('.header__mobile-clouse');
 const menu = document.querySelector('.header__nav');
 const linkMenu = document.querySelectorAll('.header__nav-link');
-
+const mainContent = document.querySelector('.main');
+const button = document.querySelector('.hamburger');
 
 button.addEventListener('click', function () {
-	menu.classList.add('open');
-	color.classList.add('color');
+	button.classList.toggle('hamburger2');
+	menu.classList.toggle('open');
+	color.classList.toggle('color');
 });
 
-buttonClouse.addEventListener('click', function () {
+mainContent.addEventListener('click', function () {
 	menu.classList.remove('open');
+	button.classList.remove('hamburger2');
 	color.classList.remove('color');
 });
 
@@ -37,6 +38,7 @@ for (let i = 0; i < linkMenu.length; i++) {
 	linkMenu[i].addEventListener('click', function () {
 		menu.classList.remove('open');
 		color.classList.remove('color');
+		button.classList.remove('hamburger2');
 	});
 }
 
