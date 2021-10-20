@@ -612,6 +612,7 @@ a:hover {
 }
 
 .hamburger {
+  display: none;
   margin: 0 auto;
   width: 30px;
   height: 25px;
@@ -2060,7 +2061,13 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    right: -300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: -800px;
     top: 0;
     position: absolute;
     -webkit-transition: 0.3s;
@@ -2070,7 +2077,11 @@ a:hover {
     background: rgba(248, 248, 248, 0.986);
     -webkit-box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5);
             box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5);
-    padding: 85px 40px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .open {
