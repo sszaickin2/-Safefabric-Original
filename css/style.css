@@ -1882,7 +1882,11 @@ a:hover {
   }
 
   .catalog__menu-list {
-    width: 220px;
+    width: 280px;
+  }
+
+  .catalog__min-heading {
+    font-size: 20px;
   }
 
   .form__push {
