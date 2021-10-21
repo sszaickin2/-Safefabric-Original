@@ -509,6 +509,14 @@ a:hover {
   z-index: 10;
 }
 
+.body {
+  overflow: hidden;
+}
+
+.pupup__none {
+  display: none;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -644,6 +652,12 @@ a:hover {
 
 .bar4 {
   bottom: 0;
+}
+
+.hamburger2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .checkbox2 + label > .hamburger2 > .bar1 {
@@ -1814,6 +1828,143 @@ a:hover {
   font-size: 20px;
 }
 
+.pupup {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.486);
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.pupub__open {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: block;
+  padding-left: 30px;
+}
+
+.popup__list {
+  background: #274C9D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 450px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.pupup__content {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pupup__content input {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+}
+
+.pupup__content input::-webkit-input-placeholder {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.pupup__content input::-moz-placeholder {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.pupup__content input:-ms-input-placeholder {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.pupup__content input::-ms-input-placeholder {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.pupup__content input::placeholder {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.pupup__button {
+  margin-top: 40px;
+}
+
+.modal__text {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 105%;
+  color: #fff;
+}
+
+.popup__clouse {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #fff;
+  font-size: 25px;
+}
+
 @media screen and (max-width: 1399px) {
   .image__width {
     min-width: 383px;
@@ -2061,16 +2212,11 @@ a:hover {
 
 @media screen and (max-width: 767px) {
   .header__nav {
+    padding: 90px 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     right: -800px;
     top: 0;
     position: absolute;
@@ -2081,7 +2227,6 @@ a:hover {
     background: rgba(248, 248, 248, 0.986);
     -webkit-box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5);
             box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5);
-    width: 100%;
   }
 
   .hamburger {
@@ -2347,6 +2492,26 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
+  .button {
+    padding: 20px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .fa-long-arrow-right {
+    display: none;
+  }
+
+  .hamburger2 {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .form__button {
+    width: 100%;
+  }
+
   .info__item {
     padding: 40px 20px;
   }
@@ -2390,6 +2555,13 @@ a:hover {
 
   .footer-block {
     padding: 70px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup__list {
+    width: 400px;
+    height: 450px;
   }
 }
 
@@ -2439,6 +2611,11 @@ a:hover {
 @media screen and (max-width: 400px) {
   .price__content {
     padding: 50px 10px;
+  }
+
+  .popup__list {
+    width: 300px;
+    height: 500px;
   }
 }
 

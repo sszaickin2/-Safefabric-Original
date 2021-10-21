@@ -15,6 +15,8 @@ testWebP(function (support) {
 	}
 });
 
+
+
 const color = document.querySelector('body')
 const menu = document.querySelector('.header__nav');
 const linkMenu = document.querySelectorAll('.header__nav-link');
@@ -41,6 +43,28 @@ for (let i = 0; i < linkMenu.length; i++) {
 		button.classList.remove('hamburger2');
 	});
 }
+
+const modalButton = document.querySelectorAll('.pupub-button');
+const pupup = document.querySelector('.pupup');
+const modalClouse = document.querySelector('.popup__clouse');
+const popupClouse = document.querySelector('.wrap');
+
+for (let i = 0; i < modalButton.length; i++) {
+	let index = i;
+	modalButton[index].addEventListener('click', function () {
+		pupup.classList.add('pupub__open');
+		color.classList.add('body');
+	})
+}
+modalClouse.addEventListener('click', function () {
+	pupup.classList.remove('pupub__open')
+	color.classList.remove('body');
+});
+popupClouse.addEventListener('click', function () {
+	pupup.classList.remove('pupub__open')
+	color.classList.remove('body');
+})
+
 
 const swiper = new Swiper('.swiper', {
 	navigation: {
@@ -147,7 +171,7 @@ function handleWindowLoad() {
 	}
 
 	infoPlay.addEventListener('click', Play_Video_Info);
-	
+
 	function Play_Video_Info() {
 		if (videoInfo.paused === true) {
 			videoInfo.play();
@@ -160,4 +184,3 @@ function handleWindowLoad() {
 	}
 
 }
-
