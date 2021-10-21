@@ -17,7 +17,7 @@ testWebP(function (support) {
 
 
 
-const color = document.querySelector('body')
+const color = document.querySelector('body');
 const menu = document.querySelector('.header__nav');
 const linkMenu = document.querySelectorAll('.header__nav-link');
 const mainContent = document.querySelector('.main');
@@ -43,27 +43,6 @@ for (let i = 0; i < linkMenu.length; i++) {
 		button.classList.remove('hamburger2');
 	});
 }
-
-const modalButton = document.querySelectorAll('.pupub-button');
-const pupup = document.querySelector('.pupup');
-const modalClouse = document.querySelector('.popup__clouse');
-const popupClouse = document.querySelector('.wrap');
-
-for (let i = 0; i < modalButton.length; i++) {
-	let index = i;
-	modalButton[index].addEventListener('click', function () {
-		pupup.classList.add('pupub__open');
-		color.classList.add('body');
-	})
-}
-modalClouse.addEventListener('click', function () {
-	pupup.classList.remove('pupub__open')
-	color.classList.remove('body');
-});
-popupClouse.addEventListener('click', function () {
-	pupup.classList.remove('pupub__open')
-	color.classList.remove('body');
-})
 
 
 const swiper = new Swiper('.swiper', {
@@ -157,30 +136,60 @@ function handleWindowLoad() {
 	const videoInfo = document.querySelector('.info__video-content');
 	const infoPlay = document.querySelector('.info-button__play');
 
-	playButton.addEventListener('click', Play_Pause_Video);
+	if (playButton) {
+		playButton.addEventListener('click', Play_Pause_Video);
 
-	function Play_Pause_Video() {
-		if (video.paused === true) {
-			video.play();
-			playButton.classList.add('clouse')
+		function Play_Pause_Video() {
+			if (video.paused === true) {
+				video.play();
+				playButton.classList.add('clouse')
+			}
+			video.addEventListener('click', function () {
+				video.pause();
+				playButton.classList.remove('clouse')
+			});
 		}
-		video.addEventListener('click', function () {
-			video.pause();
-			playButton.classList.remove('clouse')
-		});
 	}
 
-	infoPlay.addEventListener('click', Play_Video_Info);
+	if (infoPlay) {
+		infoPlay.addEventListener('click', Play_Video_Info);
 
-	function Play_Video_Info() {
-		if (videoInfo.paused === true) {
-			videoInfo.play();
-			infoPlay.classList.add('clouse')
+		function Play_Video_Info() {
+			if (videoInfo.paused === true) {
+				videoInfo.play();
+				infoPlay.classList.add('clouse')
+			}
+			videoInfo.addEventListener('click', function () {
+				videoInfo.pause();
+				infoPlay.classList.remove('clouse')
+			});
 		}
-		videoInfo.addEventListener('click', function () {
-			videoInfo.pause();
-			infoPlay.classList.remove('clouse')
-		});
 	}
+
 
 }
+
+const modalButton = document.querySelectorAll('.pupub-button');
+const pupup = document.querySelector('.pupup');
+const modalClouse = document.querySelector('.popup__clouse');
+const popupClouse = document.querySelector('.wrap');
+
+
+for (let i = 0; i < modalButton.length; i++) {
+	let index = i;
+	modalButton[index].addEventListener('click', function () {
+		pupup.classList.add('pupub__open');
+		color.classList.add('body');
+	});
+}
+
+modalClouse.addEventListener('click', function () {
+	pupup.classList.remove('pupub__open')
+	color.classList.remove('body');
+});
+
+
+popupClouse.addEventListener('click', function () {
+	pupup.classList.remove('pupub__open')
+	color.classList.remove('body');
+});
