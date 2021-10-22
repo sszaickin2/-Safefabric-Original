@@ -689,11 +689,12 @@ a:hover {
 .head {
   padding-top: 87px;
   height: 100vh;
+  position: relative;
 }
 
-.head__heading {
-  font-size: 40px;
-  color: #fff;
+.head__img {
+  width: 100%;
+  height: 100%;
 }
 
 .swiper {
@@ -701,36 +702,53 @@ a:hover {
   height: 100%;
 }
 
-.head__heading {
-  text-align: center;
-  background: #274C9D;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  left: 50%;
-  bottom: 50px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  white-space: nowrap;
-}
-
 .swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #fff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: auto;
+  bottom: 0;
+  left: 6%;
 }
 
 .swiper-pagination-bullet {
-  background: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+.head__content {
+  padding: 40px;
+  height: 70%;
+  position: absolute;
+  top: 20%;
+  right: 19%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.head__heading {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 102%;
+  color: #fff;
+}
+
+.head__button {
+  width: 30%;
+  margin-top: 67px;
 }
 
 .catalog-block {
@@ -2176,6 +2194,13 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 769px) {
+  .head__content {
+    left: 0;
+    right: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer__content {
     -webkit-box-orient: vertical;
@@ -2510,6 +2535,19 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 623px) {
+  .head__heading {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .widgets-block {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .button {
     padding: 20px 0;
@@ -2581,6 +2619,12 @@ a:hover {
   .popup__list {
     width: 400px;
     height: 450px;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .head__heading {
+    font-size: 30px;
   }
 }
 
