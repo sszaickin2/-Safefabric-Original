@@ -457,7 +457,7 @@ a {
 }
 
 a:hover {
-  color: #00c4b3;
+  color: #17ACF6;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -480,8 +480,8 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 25px 30px;
-  background: #00C4B3;
-  border: 1px solid #00C4B3;
+  background: #17ACF6;
+  border: 1px solid #17ACF6;
   outline: none;
   color: #fff;
 }
@@ -573,7 +573,7 @@ a:hover {
 }
 
 .header__nav-link:hover {
-  color: #00C4B3;
+  color: #17ACF6;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -588,7 +588,7 @@ a:hover {
 }
 
 .header__number-hover:hover {
-  color: #00C4B3;
+  color: #17ACF6;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -740,7 +740,7 @@ a:hover {
 .catalog__about {
   display: block;
   padding-top: 30px;
-  color: #00c4b3;
+  color: #17ACF6;
 }
 
 .catalog__content {
@@ -820,12 +820,12 @@ a:hover {
 
 .fa-angle-right {
   font-size: 30px;
-  color: #00C4B3;
+  color: #17ACF6;
 }
 
 .slider-button__left {
   font-size: 30px;
-  color: #00C4B3;
+  color: #17ACF6;
 }
 
 .catalog__menu {
@@ -955,7 +955,7 @@ a:hover {
   font-weight: normal;
   font-size: 14px;
   line-height: 120%;
-  color: #00C4B3;
+  color: #17ACF6;
 }
 
 .form__shipment {
@@ -1053,7 +1053,7 @@ a:hover {
 .form__line {
   width: 100%;
   height: 9px;
-  background: #00C4B3;
+  background: #17ACF6;
   margin: 55px 0 0 0;
 }
 
@@ -1336,7 +1336,7 @@ a:hover {
 .fa-angle-up {
   display: none;
   font-size: 35px;
-  color: #00C4B3;
+  color: #17ACF6;
 }
 
 .angle__up {
@@ -1399,7 +1399,7 @@ a:hover {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  color: #00c4b3;
+  color: #17ACF6;
 }
 
 .footer__police {
@@ -1417,7 +1417,7 @@ a:hover {
 }
 
 .footer__style:hover {
-  color: #00c4b3;
+  color: #17ACF6;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1496,7 +1496,7 @@ a:hover {
 }
 
 .neopren__link:hover {
-  color: #00c4b3;
+  color: #17ACF6;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1674,7 +1674,7 @@ a:hover {
 
 .fa-angle-left {
   font-size: 30px;
-  color: #00c4b3;
+  color: #17ACF6;
   margin-right: 270px;
 }
 
@@ -1963,6 +1963,25 @@ a:hover {
   top: 15px;
   color: #fff;
   font-size: 25px;
+}
+
+.widgets {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.widgets-block {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.widgets__image {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1399px) {
@@ -2360,7 +2379,7 @@ a:hover {
     display: block;
     cursor: pointer;
     font-weight: bold;
-    color: #00c4b3;
+    color: #17ACF6;
   }
 
   .info__clouse-text {
